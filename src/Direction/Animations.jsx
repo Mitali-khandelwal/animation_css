@@ -2,6 +2,7 @@ import React from "react";
 import Box1 from "./Box1";
 import BoxAnimation from "./BoxAnimation";
 import DirectionBox from "./DirectionBox";
+import HoverItems from "./HoverItems";
 
 const Animations = () => {
   return (
@@ -28,6 +29,7 @@ const Animations = () => {
           marginTop: "100px",
         }}
       >
+        <HoverItems/>
       </div>
     </div>
   );
