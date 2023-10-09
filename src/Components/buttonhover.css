@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.back,
+h1 {
+  color: #222;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.back {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 100;
+  color: #222;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.back:hover {
+  color: #aaa;
+}
+h1 {
+  padding: 2em 0 1em;
+  font-size: 48px;
+  font-weight: 300;
+  text-align: center;
+}
+.demo-list {
+  padding: 0 0 2em;
+}
+.demo {
+  padding: 2em 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .demo-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .demo {
+    width: calc(100% / 3);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .demo {
+    width: calc(100% / 4);
+    padding: 3em 0;
+  }
+}
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.8em 4em;
+  border: 2px solid #333;
+  color: #333;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  background: #231e7c;
+  transition: transform 0.3s;
+}
+.button:hover {
+  color: #fff;
+}
+
+.button01::before {
+  transform-origin: right top;
+  transform: scale(0, 1);
+}
+.button01:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.button02::before {
+  transform-origin: left top;
+  transform: scale(0, 1);
+}
+.button02:hover::before {
+  transform-origin: right top;
+  transform: scale(1, 1);
+}
+
+.button03::before {
+  transform-origin: left bottom;
+  transform: scale(1, 0);
+}
+.button03:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.button04::before {
+  transform-origin: left top;
+  transform: scale(1, 0);
+}
+.button04:hover::before {
+  transform-origin: left bottom;
+  transform: scale(1, 1);
+}
+
+.button05 {
+  overflow: hidden;
+}
+.button05::before {
+  right: auto;
+  bottom: auto;
+  width: 120%;
+  height: 100%;
+  transform-origin: right top;
+  transform: skewX(-30deg) scale(0, 1);
+}
+.button05:hover::before {
+  transform-origin: left top;
+  transform: skewX(-30deg) scale(1, 1);
+}
+
+.button06 {
+  overflow: hidden;
+}
+.button06::before {
+  right: auto;
+  bottom: auto;
+  width: 120%;
+  height: 100%;
+  transform-origin: left top;
+  transform: skewX(-30deg) scale(0, 1);
+}
+.button06:hover::before {
+  transform-origin: right top;
+  transform: skewX(-30deg) scale(1, 1);
+}
+
+.button07 {
+  overflow: hidden;
+}
+.button07::before {
+  left: -5%;
+  right: auto;
+  bottom: auto;
+  width: 110%;
+  height: 180%;
+  transform-origin: left bottom;
+  transform: skewY(-10deg) scale(1, 0);
+}
+.button07:hover::before {
+  transform-origin: left top;
+  transform: skewY(-10deg) scale(1, 1);
+}
+
+.button08 {
+  overflow: hidden;
+}
+.button08::before {
+  left: -5%;
+  right: auto;
+  bottom: auto;
+  width: 110%;
+  height: 180%;
+  transform-origin: left top;
+  transform: skewY(-10deg) scale(1, 0);
+}
+.button08:hover::before {
+  transform-origin: left bottom;
+  transform: skewY(-10deg) scale(1, 1);
+}
+
+.button09::before {
+  transform-origin: center center;
+  transform: scale(0, 1);
+}
+.button09:hover::before {
+  transform: scale(1, 1);
+}
+
+.button10::before {
+  transform-origin: center center;
+  transform: scale(1, 0);
+}
+.button10:hover::before {
+  transform: scale(1, 1);
+}
+
+.button11::before,
+.button11::after {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: #333;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.button11::before {
+  left: 0;
+  transform-origin: left top;
+}
+.button11::after {
+  right: 0;
+  transform-origin: right top;
+}
+.button11:hover::before,
+.button11:hover::after {
+  transform: scale(1, 1);
+}
+
+.button12::before,
+.button12::after {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 50%;
+  background: #333;
+  transform: scale(1, 0);
+  transition: transform 0.3s;
+}
+.button12::before {
+  top: 0;
+  transform-origin: left top;
+}
+.button12::after {
+  bottom: 0;
+  transform-origin: left bottom;
+}
+.button12:hover::before,
+.button12:hover::after {
+  transform: scale(1, 1);
+}
+
+.button13::before {
+  transform: scale(0, 1);
+}
+.button13:hover {
+  animation: hover13 0.6s forwards;
+}
+.button13:hover::before {
+  animation: hover13-in 0.3s forwards alternate,
+    hover13-out 0.3s 0.3s forwards alternate;
+}
+@keyframes hover13 {
+  0%,
+  100% {
+    color: #333;
+  }
+  50% {
+    color: #fff;
+  }
+}
+@keyframes hover13-in {
+  0% {
+    transform-origin: left top;
+    transform: scale(0, 1);
+  }
+  100% {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+}
+@keyframes hover13-out {
+  0% {
+    transform-origin: right top;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: right top;
+    transform: scale(0, 1);
+  }
+}
+
+.button14::before {
+  transform: scale(0, 1);
+}
+.button14:hover {
+  animation: hover14 0.6s forwards;
+}
+.button14:hover::before {
+  animation: hover14-in 0.3s forwards alternate,
+    hover14-out 0.3s 0.3s forwards alternate;
+}
+@keyframes hover14 {
+  0%,
+  100% {
+    color: #333;
+  }
+  50% {
+    color: #fff;
+  }
+}
+@keyframes hover14-in {
+  0% {
+    transform-origin: right top;
+    transform: scale(0, 1);
+  }
+  100% {
+    transform-origin: right top;
+    transform: scale(1, 1);
+  }
+}
+@keyframes hover14-out {
+  0% {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: left top;
+    transform: scale(0, 1);
+  }
+}
+
+.button15::before {
+  transform: scale(1, 0);
+}
+.button15:hover {
+  animation: hover15 0.6s forwards;
+}
+.button15:hover::before {
+  animation: hover15-in 0.3s forwards alternate,
+    hover15-out 0.3s 0.3s forwards alternate;
+}
+@keyframes hover15 {
+  0%,
+  100% {
+    color: #333;
+  }
+  50% {
+    color: #fff;
+  }
+}
+@keyframes hover15-in {
+  0% {
+    transform-origin: left top;
+    transform: scale(1, 0);
+  }
+  100% {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+}
+@keyframes hover15-out {
+  0% {
+    transform-origin: left bottom;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: left bottom;
+    transform: scale(1, 0);
+  }
+}
+
+.button16::before {
+  transform: scale(1, 0);
+}
+.button16:hover {
+  animation: hover16 0.6s forwards;
+}
+.button16:hover::before {
+  animation: hover16-in 0.3s forwards alternate,
+    hover16-out 0.3s 0.3s forwards alternate;
+}
+@keyframes hover16 {
+  0%,
+  100% {
+    color: #333;
+  }
+  50% {
+    color: #fff;
+  }
+}
+@keyframes hover16-in {
+  0% {
+    transform-origin: left bottom;
+    transform: scale(1, 0);
+  }
+  100% {
+    transform-origin: left bottom;
+    transform: scale(1, 1);
+  }
+}
+@keyframes hover16-out {
+  0% {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: left top;
+    transform: scale(1, 0);
+  }
+}
+
+.button17::before,
+.button17::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.button17::before {
+  background: #c88989;
+}
+.button17::after {
+  background: #b14444;
+}
+.button17:hover::before,
+.button17:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+.button17:hover::after {
+  transition-delay: 0.3s;
+}
+
+.button18::before,
+.button18::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  content: "";
+  transform: scale(0, 1);
+}
+.button18::before {
+  background: #666;
+  transform-origin: right top;
+  transition: none;
+}
+.button18::after {
+  background: #333;
+  opacity: 0;
+  transform-origin: left top;
+  transition: transform 0s 0.3s, opacity 0.3s;
+}
+.button18:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+  transition: transform 0.3s;
+}
+.button18:hover::after {
+  opacity: 1;
+  transform-origin: right top;
+  transform: scale(1, 1);
+  transition: transform 0.3s 0.3s, opacity 0.3s;
+}

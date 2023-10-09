@@ -1,15 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import SoundOnHover from './Components/SoundOnHover';
-import Main from './Components/Main';
-import WaveText from './Components/WaveText';
-import Box from './Components/Box';
+import logo from "./logo.svg";
+// import './App.css';
+import Main from "./Components/Main";
+import DirectionBox from "./Direction/DirectionBox";
+import Box1 from "./Direction/Box1";
+import Animations from "./Direction/Animations";
 
 function App() {
   return (
-    <div className="App">
-{/* <Main/> */}
-<Box/>
+    <div className="">
+      {/* <MenuBtn /> */}
+      {/* <Main/> */}
+      {/* <CubePerspective/> */}
+      <Animations/>
     </div>
   );
 }

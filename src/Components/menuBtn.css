@@ -1,0 +1,22 @@
+
+.container{
+    display: flex;
+    width: 30px;
+}
+.responsive-three-columns {
+    display:flex;
+    flex-wrap:wrap;
+    
+}
+
+/* columns */
+.responsive-three-columns > * {
+    width:100%;
+}
+
+.flex-container {
+  display: flex;
+  font-size: 20px;
+  height: 5px;
+  color: greenyellow;
+  }

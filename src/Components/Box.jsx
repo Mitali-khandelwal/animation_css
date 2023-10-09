@@ -6,9 +6,9 @@ const itemVariants: Variants = {
   open: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 }
+    transition: { type: "spring", stiffness: 300, damping: 24 },
   },
-  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+  closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
 
 export default function Box() {
@@ -28,7 +28,7 @@ export default function Box() {
         <motion.div
           variants={{
             open: { rotate: 180 },
-            closed: { rotate: 0 }
+            closed: { rotate: 0 },
           }}
           transition={{ duration: 0.2 }}
           style={{ originY: 0.55 }}
@@ -47,17 +47,17 @@ export default function Box() {
               bounce: 0,
               duration: 0.7,
               delayChildren: 0.3,
-              staggerChildren: 0.05
-            }
+              staggerChildren: 0.05,
+            },
           },
           closed: {
             clipPath: "inset(10% 50% 90% 50% round 10px)",
             transition: {
               type: "spring",
               bounce: 0,
-              duration: 0.3
-            }
-          }
+              duration: 0.3,
+            },
+          },
         }}
         style={{ pointerEvents: isOpen ? "auto" : "none" }}
       >
